@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:21:43 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/15 16:42:25 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:51:38 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,17 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
 
 	Fixed A = Fixed(Point::calculateArea(a, b, c));
 
+	if (A == Fixed(0))
+		return false;
+
 	Fixed A1 = Fixed(Point::calculateArea(point, a, b));
 	Fixed A2 = Fixed(Point::calculateArea(point, b, c));
 	Fixed A3 = Fixed(Point::calculateArea(point, a, c));
 
-	if (A == A1 + A2 + A3) {
-		if (A1 == Fixed(0) || A2 == Fixed(0) || A3 == Fixed(0))
-			return false;
+	if (A1 == Fixed(0) || A2 == Fixed(0) || A3 == Fixed(0))
+		return false;
+
+	if (A == A1 + A2 + A3)
 		return true;
-	}
 	return false;
 }

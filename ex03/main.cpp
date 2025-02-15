@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:04:08 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/15 16:40:13 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:56:20 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 
 int main(void)
 {
-		Fixed x1(Fixed(0));
-		Fixed y1(Fixed(0));
+		Fixed x1(Fixed(1));
+		Fixed y1(Fixed(2));
 		Point A(x1, y1);
 
-		Fixed x2(Fixed(5));
-		Fixed y2(Fixed(0));
+		Fixed x2(Fixed(7));
+		Fixed y2(Fixed(19));
 		Point B(x2, y2);
 
-		Fixed x3(Fixed(0));
-		Fixed y3(Fixed(4));
+		Fixed x3(Fixed(15));
+		Fixed y3(Fixed(0));
 		Point C(x3, y3);
 
 		std::cout << "A" << A << std::endl;
@@ -33,8 +33,8 @@ int main(void)
 		std::cout << "C" << C << std::endl;
 		std::cout << std::endl;
 
-		Fixed x4(Fixed(1));
-		Fixed y4(Fixed(1.5f));
+		Fixed x4(Fixed(3));
+		Fixed y4(Fixed(7.76f));
 		Point P(x4, y4);
 
 		for (int i = 0; i < 20; i++) {
