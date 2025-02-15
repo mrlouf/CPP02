@@ -6,28 +6,28 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:04:03 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/14 17:16:01 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:06:24 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed Fixed::operator+(const Fixed &other) {
+Fixed Fixed::operator+(const Fixed &other) const {
 	Fixed result;
 	result.setRawBits(this->_fixed + other._fixed);
 	return result;
 }
-Fixed Fixed::operator-(const Fixed &other) {
+Fixed Fixed::operator-(const Fixed &other) const {
 	Fixed result;
 	result.setRawBits(this->_fixed - other._fixed);
 	return result;
 }
-Fixed Fixed::operator*(const Fixed &other) {
+Fixed Fixed::operator*(const Fixed &other) const {
 	Fixed result;
 	result.setRawBits((this->_fixed * other._fixed) >> _bits);
 	return result;
 }
-Fixed Fixed::operator/(const Fixed &other) {
+Fixed Fixed::operator/(const Fixed &other) const {
 	// Directly returns 0 if division by zero
 	if (other._fixed == 0) {
 		std::cerr << "Error: Division by zero" << std::endl;
