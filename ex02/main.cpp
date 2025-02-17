@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:04:08 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/17 09:24:56 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/17 10:05:50 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int main(void)
 		std::cout << b << std::endl;
 		
 		std::cout << Fixed::max( a, b ) << std::endl;
+
+		std::cout << Fixed::min( a, b ) << std::endl;
 	}
 	{
 		std::cout << std::endl;
@@ -36,6 +38,9 @@ int main(void)
 		std::cout << ++b << std::endl;
 		std::cout << a / b << std::endl;
 		std::cout << a * b << std::endl;
+		std::cout << a + b << std::endl;
+		std::cout << a - b << std::endl;
+		std::cout << b - a << std::endl;
 		std::cout << b++ << std::endl;
 		std::cout << b << std::endl;
 	}

@@ -6,11 +6,13 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:04:03 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/17 09:24:08 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/17 09:54:00 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int	Fixed::_bits = 8;
 
 // Default constructor that initialises the fixed-point value to 0
 Fixed::Fixed() : _fixed(0) {
@@ -72,7 +74,7 @@ float Fixed::toFloat( void ) const {
 }
 
 int Fixed::toInt( void ) const {
-	return _fixed >> _bits; // Divide by 2^_bits
+	return _fixed >> _bits;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &f) {

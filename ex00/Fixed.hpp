@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:03:57 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/17 09:21:13 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/17 09:56:55 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class	Fixed {
 	private:
 	
 		int					_fixed;
-		static const int	_bits = 8;
+		static const int	_bits;
 
 	public:
 
