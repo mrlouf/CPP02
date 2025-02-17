@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 11:04:03 by nponchon          #+#    #+#             */
-/*   Updated: 2025/02/14 14:27:28 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/02/17 09:24:08 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void Fixed::setRawBits( int const raw ) {
 
 }
 
-// C++ cast the value of fixed to float, divided by 
+// C++ cast the value of fixed to float and divide by 2^_bits
 float Fixed::toFloat( void ) const {
 	return static_cast<float>(_fixed) / (1 << _bits);
 }
